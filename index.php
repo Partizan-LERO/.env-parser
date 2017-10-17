@@ -1,9 +1,10 @@
 <?php
+$delimiter = '.';
 $new_array = [];
 $file = parse_ini_file(".env");
 
 foreach ($file as $key => $value) {
-    $karr = explode('.', $key);
+    $karr = explode($delimiter, $key);
     $arr = &$new_array;
 
     foreach ($karr as $k => $v) {
@@ -15,4 +16,3 @@ foreach ($file as $key => $value) {
 
 unset($arr);
 var_dump($new_array);
-
