@@ -1,1 +1,1 @@
-# Парсер .env-файла
+#  .env-file parser
